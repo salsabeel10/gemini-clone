@@ -16,7 +16,7 @@ import gemini_icon from './gemini_icon.png'
 
 const cardTexts = [
   'Top travel destinations in 2024?',
-  'Need to write an email, a social media post, or a presentation?',
+  'Explain quantum computing and its basics?',
   'Easy recipes for breakfast?',
   'Best practices for designing clean, powerful user interfaces?',
 ]

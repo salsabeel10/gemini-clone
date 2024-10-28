@@ -15,16 +15,20 @@ const Main = () => {
     input,
   } = useContext(Context)
 
+  const handleRefresh=()=>{
+    window.location.reload()
+  }
+
   return (
     <div className="main">
-      <div className="nav">
-        <p>Gemini</p>
-        <img src={assets.user_icon} alt="user-icon" />
+      <div className="nav pb-0">
+        <p onClick={handleRefresh} className='cursor-pointer'>Gemini</p>
+        <img onClick={handleRefresh} className='cursor-pointer' src={assets.user_icon} alt="user-icon" />
       </div>
       <div className="main-container">
         {!showResult ? (
           <>
-            <div className="greet">
+            <div className="greet mt-7">
               <p>
                 <span>Hello, Salsabeel</span>
               </p>
@@ -33,7 +37,7 @@ const Main = () => {
             <Cards />
           </>
         ) : (
-          <div className="result">
+          <div className="result mb-8">
             <div className="result-title">
               <img src={assets.user_icon} alt="user-icon" />
               <p>{recentPrompt}</p>
@@ -54,7 +58,7 @@ const Main = () => {
         )}
 
         <div className="main-bottom">
-          <div className="search-box">
+          <div className="search-box ">
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}

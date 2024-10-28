@@ -18,7 +18,7 @@ const Cards = () => {
        { src: assets.code_icon, alt: 'code-icon' },
      ]
   return (
-    <div className="cards">
+    <div className="cards pt-1 mb-10">
       {assets.cardTexts.map((text, index) => (
         <div className="card" key={index} onClick={()=>handleClick(text)}>
           <p>{text}</p>
