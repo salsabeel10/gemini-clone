@@ -2,11 +2,14 @@ import React, { useContext, useState } from 'react'
 import './Sidebar.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../Context/Context'
+import { toast } from 'react-toastify'
+
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false)
   const {onSent,prevPrompts,setRecentPrompt,newChat} = useContext(Context);
   const uniquePrompts = Array.from(new Set(prevPrompts))
+  const comingSoon = () => toast.info('Coming Soon !')
 
   // console.log(prevPrompts);
   const loadPrompt = async(prompt)=>{
@@ -45,15 +48,15 @@ const Sidebar = () => {
 
       <div className="bottom">
         <div className="bottom-item recent-entry">
-          <img src={assets.question_icon} alt="question" />
+          <img onClick={comingSoon} src={assets.question_icon} alt="question" />
           {extended ? <p>Help</p> : null}
         </div>
         <div className="bottom-item recent-entry">
-          <img src={assets.history_icon} alt="history" />
+          <img onClick={comingSoon} src={assets.history_icon} alt="history" />
           {extended ? <p>Activity</p> : null}
         </div>
         <div className="bottom-item recent-entry">
-          <img src={assets.setting_icon} alt="setting" />
+          <img onClick={comingSoon} src={assets.setting_icon} alt="setting" />
           {extended ? <p>Settings</p> : null}
         </div>
       </div>
