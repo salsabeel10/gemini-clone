@@ -48,7 +48,6 @@ const ContextProvider = (props) => {
         newResponse += '<b>' + responseArray[i] + '</b>'
       }
     }
-
     // Step 2: Replace single "*" with bullet points
     let formattedResponse = newResponse.split('*').join('<br>&bull; ')
 
