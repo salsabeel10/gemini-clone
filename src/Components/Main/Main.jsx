@@ -21,18 +21,27 @@ const Main = () => {
 
   return (
     <div className="main">
-      <div className="nav pb-0">
-        <p onClick={handleRefresh} className='cursor-pointer'>Gemini</p>
-        <img onClick={handleRefresh} className='cursor-pointer' src={assets.user_icon} alt="user-icon" />
+      <div className="nav">
+        <p onClick={handleRefresh} className="cursor-pointer">
+          Gemini
+        </p>
+        <img
+          onClick={handleRefresh}
+          className="cursor-pointer"
+          src={assets.user_icon}
+          alt="user-icon"
+        />
       </div>
       <div className="main-container">
         {!showResult ? (
           <>
-            <div className="greet mt-7">
-              <p>
+            <div className="greet mt-7 text-center sm:text-left">
+              <p className="text-lg sm:text-xl lg:text-2xl font-semibold">
                 <span>Hello, Salsabeel</span>
               </p>
-              <p>How can I help you today?</p>
+              <p className="text-sm sm:text-base lg:text-lg mt-2">
+                How can I help you today?
+              </p>
             </div>
             <Cards />
           </>
@@ -58,14 +67,14 @@ const Main = () => {
         )}
 
         <div className="main-bottom">
-          <div className="search-box ">
+          <div className="search-box">
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}
               type="text"
               placeholder="Enter a prompt here"
-              onKeyDown={(e)=>{
-                if(e.key === 'Enter'){
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
                   onSent()
                 }
               }}
@@ -73,17 +82,18 @@ const Main = () => {
             <div>
               <img src={assets.gallery_icon} alt="gallery-icon" />
               <img src={assets.mic_icon} alt="mic-icon" />
-              {input?<img
-                onClick={() => onSent()}
-                src={assets.send_icon}
-                alt="send-icon"
-              />:null}
-              
+              {input ? (
+                <img
+                  onClick={() => onSent()}
+                  src={assets.send_icon}
+                  alt="send-icon"
+                />
+              ) : null}
             </div>
           </div>
           <p className="bottom-info">
             Gemini may display inaccurate info, including about people, so
-            double-check its responses. Your privacy and Gemini Apps
+            double-check its responses. Your privacy and Gemini Apps.
           </p>
         </div>
       </div>
