@@ -3,7 +3,7 @@ import './Main.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../Context/Context'
 import Cards from './Cards'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Main = () => {
@@ -18,6 +18,7 @@ const Main = () => {
   } = useContext(Context)
 
   const handleRefresh = () => {
+
     window.location.reload()
   }
 
