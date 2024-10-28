@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './Main.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../Context/Context'
+import Cards from './Cards'
 
 const Main = () => {
   const {
@@ -29,38 +30,7 @@ const Main = () => {
               </p>
               <p>How can I help you today?</p>
             </div>
-            <div className="cards">
-              <div className="card">
-                <p>
-                  What information about your upcoming trip are you seeking?
-                </p>
-                <img src={assets.compass_icon} alt="compass-icon" />
-              </div>
-
-              <div className="card">
-                <p>
-                  Need to write an email, a social media post, or a
-                  presentation?
-                </p>
-                <img src={assets.message_icon} alt="message-icon" />
-              </div>
-
-              <div className="card">
-                <p>
-                  Do you want to express yourself creatively but lack
-                  inspiration?
-                </p>
-                <img src={assets.bulb_icon} alt="bulb-icon" />
-              </div>
-
-              <div className="card">
-                <p>
-                  How can I support you in learning more about programming
-                  languages?
-                </p>
-                <img src={assets.code_icon} alt="code-icon" />
-              </div>
-            </div>
+            <Cards />
           </>
         ) : (
           <div className="result">

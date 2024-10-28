@@ -14,6 +14,13 @@ import code_icon from './code_icon.png'
 import send_icon from './send_icon.png'
 import gemini_icon from './gemini_icon.png'
 
+const cardTexts = [
+  'What information about your upcoming trip are you seeking?',
+  'Need to write an email, a social media post, or a presentation?',
+  'Do you want to express yourself creatively but lack inspiration?',
+  'How can I support you in learning more about programming languages?',
+];
+
 export const assets = {
     history_icon,
     menu_icon,
@@ -29,5 +36,6 @@ export const assets = {
     message_icon,
     code_icon,
     send_icon,
-    gemini_icon
+    gemini_icon,
+    cardTexts
 }
