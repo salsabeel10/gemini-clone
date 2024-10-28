@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { assets } from '../../assets/assets'
+import { Context } from '../../Context/Context'
 import './Main.css'
 
 const Cards = () => {
+    const {setInput} =useContext(Context)
     const [cardInput, setCardInput] = useState(null)
     const handleClick=(t)=>{
-        setCardInput(t)
+        setInput(t)
         console.log(cardInput)
     }
     

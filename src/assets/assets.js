@@ -15,27 +15,27 @@ import send_icon from './send_icon.png'
 import gemini_icon from './gemini_icon.png'
 
 const cardTexts = [
-  'What information about your upcoming trip are you seeking?',
+  'Top travel destinations in 2024?',
   'Need to write an email, a social media post, or a presentation?',
-  'Do you want to express yourself creatively but lack inspiration?',
-  'How can I support you in learning more about programming languages?',
-];
+  'Easy recipes for breakfast?',
+  'Best practices for designing clean, powerful user interfaces?',
+]
 
 export const assets = {
-    history_icon,
-    menu_icon,
-    plus_icon,
-    question_icon,
-    setting_icon,
-    bulb_icon,
-    compass_icon,
-    gallery_icon,
-    mic_icon,
-    user_icon,
-    youtube_icon,
-    message_icon,
-    code_icon,
-    send_icon,
-    gemini_icon,
-    cardTexts
+  history_icon,
+  menu_icon,
+  plus_icon,
+  question_icon,
+  setting_icon,
+  bulb_icon,
+  compass_icon,
+  gallery_icon,
+  mic_icon,
+  user_icon,
+  youtube_icon,
+  message_icon,
+  code_icon,
+  send_icon,
+  gemini_icon,
+  cardTexts,
 }
