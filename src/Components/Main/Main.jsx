@@ -19,8 +19,10 @@ const Main = () => {
     window.location.reload()
   }
 
-  const comingSoon=()=>{
-    window.alert("Coming Soon..")
+  const comingSoon = () => {
+    requestAnimationFrame(() => {
+      window.alert('Coming Soon..')
+    })
   }
 
   return (
