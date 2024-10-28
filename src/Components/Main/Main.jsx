@@ -19,6 +19,10 @@ const Main = () => {
     window.location.reload()
   }
 
+  const comingSoon=()=>{
+    window.alert("Coming Soon..")
+  }
+
   return (
     <div className="main">
       <div className="nav">
@@ -78,8 +82,8 @@ const Main = () => {
               }}
             />
             <div>
-              <img src={assets.gallery_icon} alt="gallery-icon" />
-              <img src={assets.mic_icon} alt="mic-icon" />
+              <img onClick={comingSoon} src={assets.gallery_icon} alt="gallery-icon" />
+              <img onClick={comingSoon} src={assets.mic_icon} alt="mic-icon" />
               {input ? (
                 <img
                   onClick={() => onSent()}
