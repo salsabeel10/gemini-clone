@@ -3,6 +3,8 @@ import './Main.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../Context/Context'
 import Cards from './Cards'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Main = () => {
   const {
@@ -15,18 +17,15 @@ const Main = () => {
     input,
   } = useContext(Context)
 
-  const handleRefresh=()=>{
+  const handleRefresh = () => {
     window.location.reload()
   }
 
-  const comingSoon = () => {
-    requestAnimationFrame(() => {
-      window.alert('Coming Soon..')
-    })
-  }
+  const comingSoon = () => toast.info('Coming Soon !')
 
   return (
     <div className="main">
+      <ToastContainer />
       <div className="nav">
         <p onClick={handleRefresh} className="cursor-pointer">
           Gemini
@@ -84,7 +83,11 @@ const Main = () => {
               }}
             />
             <div>
-              <img onClick={comingSoon} src={assets.gallery_icon} alt="gallery-icon" />
+              <img
+                onClick={comingSoon}
+                src={assets.gallery_icon}
+                alt="gallery-icon"
+              />
               <img onClick={comingSoon} src={assets.mic_icon} alt="mic-icon" />
               {input ? (
                 <img
