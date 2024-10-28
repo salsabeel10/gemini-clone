@@ -65,7 +65,7 @@ const Main = () => {
         )}
 
         <div className="main-bottom">
-          <div className="search-box pb-0">
+          <div className="search-box">
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}
@@ -89,7 +89,7 @@ const Main = () => {
               ) : null}
             </div>
           </div>
-          <p className="bottom-info">
+          <p className="bottom-info sm:pb-0">
             Gemini may display inaccurate info, including about people, so
             double-check its responses. Your privacy and Gemini Apps.
           </p>

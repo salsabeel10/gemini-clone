@@ -182,7 +182,7 @@
   line-height: 1.8;
 }
 
-@media (max-width:600px) {
+@media (max-width:640px) {
   .main-bottom input {
     flex: 1; /* Allow the input to take up available space */
     width: auto; /* Remove the fixed width */
