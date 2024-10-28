@@ -18,7 +18,7 @@ const cardTexts = [
   'Top travel destinations in 2024?',
   'Explain quantum computing and its basics?',
   'Easy recipes for breakfast?',
-  'Best practices for designing clean, powerful user interfaces?',
+  'Best practices for designing clean, powerful UI?',
 ]
 
 export const assets = {
