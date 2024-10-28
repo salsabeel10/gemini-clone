@@ -35,13 +35,11 @@ const Main = () => {
       <div className="main-container">
         {!showResult ? (
           <>
-            <div className="greet mt-7 text-center sm:text-left">
-              <p className="text-lg sm:text-xl lg:text-2xl font-semibold">
+            <div className="greet mt-7">
+              <p>
                 <span>Hello, Salsabeel</span>
               </p>
-              <p className="text-sm sm:text-base lg:text-lg mt-2">
-                How can I help you today?
-              </p>
+              <p>How can I help you today?</p>
             </div>
             <Cards />
           </>
@@ -67,7 +65,7 @@ const Main = () => {
         )}
 
         <div className="main-bottom">
-          <div className="search-box">
+          <div className="search-box pb-0">
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}
