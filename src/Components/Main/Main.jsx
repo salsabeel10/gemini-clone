@@ -25,7 +25,6 @@ const Main = () => {
 
   return (
     <div className="main">
-      <ToastContainer />
       <div className="nav">
         <p onClick={handleRefresh} className="cursor-pointer">
           Gemini
