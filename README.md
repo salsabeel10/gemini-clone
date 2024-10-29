@@ -1,9 +1,6 @@
 ---
 
 # 🌠 Gemini Clone - Responsive Web Application
-
-**Live Demo**: [Gemini Clone Demo](https://lnkd.in/de_7v7gG)
-
 ---
 
 ## 📜 Project Overview
