@@ -13,7 +13,7 @@ import {
   HarmBlockThreshold,
 } from "@google/generative-ai";
 
-const apiKey = 'AIzaSyBuc4qa5P3WAPKrSMeUBs2SYeGtW6tDD_M'
+const apiKey = 'AIzaSyD62BSf4GfG79t3Pu9TNg1vnoEKHXEqZdo'
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
@@ -29,17 +29,28 @@ const generationConfig = {
 };
 
 async function run(prompt) {
-  const chatSession = model.startChat({
-    generationConfig,
-    // safetySettings: Adjust safety settings
-    // See https://ai.google.dev/gemini-api/docs/safety-settings
-    history: [],
-  });
+  try {
+    const chatSession = model.startChat({
+      generationConfig,
+      history: [],
+    })
 
-  const result = await chatSession.sendMessage(prompt);
-  const response = result.response;
-  console.log(response.text());
-  return response.text();
+    const result = await chatSession.sendMessage(prompt)
+    const response = result.response
+    console.log(response.text())
+    return response.text()
+  } catch (error) {
+    // Check for the rate limit exceeded error
+    if ( error.status === 429) {
+      alert('Request limit reached. Please try again later.')
+      return
+    } else {
+      console.error('An error occurred:', error)
+      alert(
+        'An error occurred while processing your request. Please try again.'
+      )
+    }
+  }
 }
 
 export default run;
